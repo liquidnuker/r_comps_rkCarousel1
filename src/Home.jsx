@@ -1,3 +1,5 @@
+import RkCarousel1_01 from "./RkCarousel1-01_wrap.jsx";
+
 export default function Home(props) {
   return (
     <div>
@@ -7,7 +9,7 @@ export default function Home(props) {
         <div className="col-sm-3">39</div>
         <div className="col-sm-9">
         {/*begin rkCarousel1*/}
-          zz
+          <RkCarousel1_01 />
         {/*end rkCarousel1*/}
         </div>
       </div>
