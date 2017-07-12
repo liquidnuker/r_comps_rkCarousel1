@@ -13,16 +13,6 @@ function NextButton(props) {
   );
 }
 
-function Test(props) {
-  return (
-    <div>
-      {props.pr_state.map((i) =>
-        <p>{i.itemName}</p>
-      )}
-    </div>
-  );
-}
-
 export default class RkCarousel1 extends React.Component {
   constructor(props) {
     super(props);
@@ -53,6 +43,11 @@ export default class RkCarousel1 extends React.Component {
     this.refresh();
   }
 
+  customPage(index) {
+    this.state.cIndex = index;
+    this.refresh();
+  }
+
   refresh() {
     this.setState(prevState => ({
       cIndex: this.state.cIndex
@@ -65,7 +60,14 @@ export default class RkCarousel1 extends React.Component {
         {this.state.items[this.state.cIndex].itemName}
         <PrevButton pr_onClick={() => { this.prevItem() }} />
         <NextButton pr_onClick={() => { this.nextItem() }} />
-        <Test pr_state={this.state.items} />
+        
+        {/*pagebuttons*/}
+        {this.state.items.map((i, index) =>
+          <button onClick={() => { this.customPage(index) }}>
+          {index}
+          </button>
+        )}
+      {/*end pagebuttons*/}
       </div>
     );
   }
