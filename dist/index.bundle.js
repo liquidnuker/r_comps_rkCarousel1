@@ -101,7 +101,25 @@ function Home(props) {
   return React.createElement(
     "div",
     null,
-    "Home.jsx"
+    React.createElement(
+      "h2",
+      { className: "item-id" },
+      "rkCarousel1-01"
+    ),
+    React.createElement(
+      "div",
+      { className: "row" },
+      React.createElement(
+        "div",
+        { className: "col-sm-3" },
+        "39"
+      ),
+      React.createElement(
+        "div",
+        { className: "col-sm-9" },
+        "zz"
+      )
+    )
   );
 }
 

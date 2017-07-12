@@ -847,3 +847,11 @@ h1 {
 @media (min-width: 30em) {
   .tabs1-02 > input[type="radio"] + label {
     width: auto; } }
+
+[class|="col"] {
+  position: relative;
+  min-height: 1px;
+  border: 1px solid #000; }
+
+.item-id {
+  background-color: #ccc; }

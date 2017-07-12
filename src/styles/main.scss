@@ -22,4 +22,9 @@
 
 // show col-* grid borders (_grid.scss)
 // ==================================================/
-// @include col-grid-border(#000);
+@include col-grid-border(#000);
+
+// temp 
+.item-id {
+  background-color: #ccc;
+}
