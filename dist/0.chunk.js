@@ -21,6 +21,36 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // use export default for async wrap
 
 
+function PrevButton(props) {
+  return React.createElement(
+    "button",
+    { onClick: props.pr_onClick },
+    "Prev"
+  );
+}
+
+function NextButton(props) {
+  return React.createElement(
+    "button",
+    { onClick: props.pr_onClick },
+    "Next"
+  );
+}
+
+function Test(props) {
+  return React.createElement(
+    "div",
+    null,
+    props.pr_state.map(function (i) {
+      return React.createElement(
+        "p",
+        null,
+        i.itemName
+      );
+    })
+  );
+}
+
 var RkCarousel1 = function (_React$Component) {
   _inherits(RkCarousel1, _React$Component);
 
@@ -42,13 +72,52 @@ var RkCarousel1 = function (_React$Component) {
 
   // methods
 
+
   _createClass(RkCarousel1, [{
+    key: "nextItem",
+    value: function nextItem() {
+      this.state.cIndex = this.state.cIndex + 1;
+      this.state.cIndex = this.state.cIndex % this.state.items.length; // go to first
+      // return this.state.items[this.state.cIndex];  
+      this.refresh();
+    }
+  }, {
+    key: "prevItem",
+    value: function prevItem() {
+      if (this.state.cIndex === 0) {
+        this.state.cIndex = this.state.items.length; // go to last
+      }
+      this.state.cIndex = this.state.cIndex - 1;
+      // return this.state.items[this.state.cIndex];
+      this.refresh();
+    }
+  }, {
+    key: "refresh",
+    value: function refresh() {
+      var _this2 = this;
+
+      this.setState(function (prevState) {
+        return {
+          cIndex: _this2.state.cIndex
+        };
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       return React.createElement(
         "div",
         null,
-        this.state.items[this.state.cIndex].itemName
+        this.state.items[this.state.cIndex].itemName,
+        React.createElement(PrevButton, { pr_onClick: function pr_onClick() {
+            _this3.prevItem();
+          } }),
+        React.createElement(NextButton, { pr_onClick: function pr_onClick() {
+            _this3.nextItem();
+          } }),
+        React.createElement(Test, { pr_state: this.state.items })
       );
     }
   }]);
