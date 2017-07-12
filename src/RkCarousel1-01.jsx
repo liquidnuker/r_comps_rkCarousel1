@@ -1,10 +1,12 @@
 // use export default for async wrap
+import {store} from "./js/store.js";
 
 export default class RkCarousel1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: "default"
+      items: store.items,
+      cIndex: 0
     };
 
     // binders
@@ -16,7 +18,7 @@ export default class RkCarousel1 extends React.Component {
   
   render() {
     return (
-      <div>{this.state.items}</div>
+      <div>{this.state.items[this.state.cIndex].itemName}</div>
     );
   }
 }
