@@ -28,17 +28,19 @@ export default class RkCarousel1 extends React.Component {
   
   // methods
   nextItem() {
-    this.state.cIndex = this.state.cIndex + 1;
-    this.state.cIndex = this.state.cIndex % this.state.items.length; // go to first
-    // return this.state.items[this.state.cIndex];  
+    let state = this.state; // "this" remover
+    state.cIndex = state.cIndex + 1;
+    state.cIndex = state.cIndex % state.items.length; // go to first
+    // return state.items[state.cIndex];  
     this.refresh();
   }
 
   prevItem() {
-    if (this.state.cIndex === 0) {
-      this.state.cIndex = this.state.items.length; // go to last
+    let state = this.state;
+    if (state.cIndex === 0) {
+      state.cIndex = state.items.length; // go to last
     }
-    this.state.cIndex = this.state.cIndex - 1;
+    state.cIndex = state.cIndex - 1;
     // return this.state.items[this.state.cIndex];
     this.refresh();
   }
