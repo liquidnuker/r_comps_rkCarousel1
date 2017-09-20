@@ -3,13 +3,23 @@ import {store} from "../js/store.js";
 
 function PrevButton(props) {
   return (
-    <button onClick={props.pr_onClick}>Prev</button>
+    <button className="rkCarousel1_01_previous" onClick={props.pr_onClick}>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+    <span>Previous</span>
+    </button>
   );
 }
 
 function NextButton(props) {
   return (
-    <button onClick={props.pr_onClick}>Next</button>
+    <button className="rkCarousel1_01_next" onClick={props.pr_onClick}>
+    <span>Next</span>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+    </button>
   );
 }
 
@@ -58,18 +68,23 @@ export default class RkCarousel1 extends React.Component {
   
   render() {
     return (
-      <div>
-        {this.state.items[this.state.cIndex].itemName}
-        <PrevButton pr_onClick={() => { this.prevItem() }} />
-        <NextButton pr_onClick={() => { this.nextItem() }} />
-        
-        {/*pagebuttons*/}
-        {this.state.items.map((i, index) =>
-          <button onClick={() => { this.customPage(index) }}>
-          {index}
-          </button>
+      <div className="rkCarousel1-01">
+      <div className="rkCarousel1-01_content">
+      {this.state.items[this.state.cIndex].itemName}
+      </div>
+
+      <nav className="rkCarousel1-01_pagination">
+      {this.state.items.map((i, index) =>
+        <button className="rkCarousel1-01_pagebuttons" onClick={() => { this.customPage(index) }}>
+        {index}
+        </button>
         )}
-      {/*end pagebuttons*/}
+      </nav>
+
+      <div className="rkCarousel1-01_prevnext">
+      <PrevButton pr_onClick={() => { this.prevItem() }} />
+      <NextButton pr_onClick={() => { this.nextItem() }} />
+      </div>
       </div>
     );
   }

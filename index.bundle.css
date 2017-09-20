@@ -6,7 +6,7 @@
   .row:after {
     clear: both; }
 
-.btn {
+.btn, .rkCarousel1-01 button svg, .rkCarousel1-01_pagebuttons {
   display: inline-block; }
 
 input, textarea, select, html, body, div, span, applet, object, iframe,
@@ -28,8 +28,11 @@ input [type="button"],
   margin: 0;
   padding: 0; }
 
-.btn1-01 {
+.btn1-01, .rkCarousel1-01_pagebuttons {
   padding: 4px; }
+
+.rkCarousel1-01_pagination, .rkCarousel1-01_prevnext {
+  text-align: center; }
 
 *,
 *:before,
@@ -793,6 +796,58 @@ input [type="button"],
     width: 16.66666667%; }
   .col-lg-1 {
     width: 8.33333333%; } }
+
+.rkCarousel1-01 {
+  background-color: #2a2a2d;
+  color: #fff; }
+  .rkCarousel1-01 button {
+    background-color: #bab9b9;
+    border: 1px solid #000; }
+    .rkCarousel1-01 button svg {
+      fill: #fff; }
+    .rkCarousel1-01 button:hover {
+      background-color: #fff; }
+    .rkCarousel1-01 button:hover svg {
+      fill: #be0101; }
+
+.rkCarousel1-01_content {
+  background-color: #1c1d22; }
+
+.rkCarousel1-01_pagebuttons {
+  color: #fff;
+  background-color: #343437;
+  border: 1px solid #5c5d60; }
+  .rkCarousel1-01_pagebuttons:hover {
+    background-color: #fff;
+    color: #be0101; }
+
+.rkCarousel1-01 button {
+  cursor: pointer; }
+  .rkCarousel1-01 button span {
+    vertical-align: middle; }
+  .rkCarousel1-01 button svg {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px; }
+
+.rkCarousel1_01_previous {
+  padding: 4px 4px 4px 0;
+  /* trbl */ }
+
+.rkCarousel1_01_next {
+  padding: 4px 0 4px 4px;
+  /* trbl */ }
+
+.rkCarousel1-01_content {
+  height: 50px; }
+
+.rkCarousel1-01_pagination {
+  padding: 6px 0 6px 0;
+  /* trbl */ }
+
+.rkCarousel1-01_pagebuttons {
+  margin-right: 4px;
+  cursor: pointer; }
 
 [class|="col"] {
   position: relative;

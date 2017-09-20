@@ -24,16 +24,34 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function PrevButton(props) {
   return React.createElement(
     "button",
-    { onClick: props.pr_onClick },
-    "Prev"
+    { className: "rkCarousel1_01_previous", onClick: props.pr_onClick },
+    React.createElement(
+      "svg",
+      { xmlns: "http://www.w3.org/2000/svg" },
+      React.createElement("path", { d: "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" })
+    ),
+    React.createElement(
+      "span",
+      null,
+      "Previous"
+    )
   );
 }
 
 function NextButton(props) {
   return React.createElement(
     "button",
-    { onClick: props.pr_onClick },
-    "Next"
+    { className: "rkCarousel1_01_next", onClick: props.pr_onClick },
+    React.createElement(
+      "span",
+      null,
+      "Next"
+    ),
+    React.createElement(
+      "svg",
+      { xmlns: "http://www.w3.org/2000/svg" },
+      React.createElement("path", { d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" })
+    )
   );
 }
 
@@ -103,23 +121,35 @@ var RkCarousel1 = function (_React$Component) {
 
       return React.createElement(
         "div",
-        null,
-        this.state.items[this.state.cIndex].itemName,
-        React.createElement(PrevButton, { pr_onClick: function pr_onClick() {
-            _this3.prevItem();
-          } }),
-        React.createElement(NextButton, { pr_onClick: function pr_onClick() {
-            _this3.nextItem();
-          } }),
-        this.state.items.map(function (i, index) {
-          return React.createElement(
-            "button",
-            { onClick: function onClick() {
-                _this3.customPage(index);
-              } },
-            index
-          );
-        })
+        { className: "rkCarousel1-01" },
+        React.createElement(
+          "div",
+          { className: "rkCarousel1-01_content" },
+          this.state.items[this.state.cIndex].itemName
+        ),
+        React.createElement(
+          "nav",
+          { className: "rkCarousel1-01_pagination" },
+          this.state.items.map(function (i, index) {
+            return React.createElement(
+              "button",
+              { className: "rkCarousel1-01_pagebuttons", onClick: function onClick() {
+                  _this3.customPage(index);
+                } },
+              index
+            );
+          })
+        ),
+        React.createElement(
+          "div",
+          { className: "rkCarousel1-01_prevnext" },
+          React.createElement(PrevButton, { pr_onClick: function pr_onClick() {
+              _this3.prevItem();
+            } }),
+          React.createElement(NextButton, { pr_onClick: function pr_onClick() {
+              _this3.nextItem();
+            } })
+        )
       );
     }
   }]);

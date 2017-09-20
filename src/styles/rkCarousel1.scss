@@ -1,0 +1,86 @@
+@mixin rkCarousel1-01_theme() {
+  .rkCarousel1-01 {
+    background-color: #2a2a2d;
+    color: #fff;
+
+    button {
+      background-color: #bab9b9;
+      border: 1px solid #000;
+
+      svg {
+        fill: #fff;
+      }
+
+      &:hover {
+        background-color: #fff;
+      }
+
+      &:hover svg {
+        fill: #be0101;
+      }
+    }
+  }
+
+  .rkCarousel1-01_content {
+    background-color: #1c1d22;
+  }
+
+  .rkCarousel1-01_pagebuttons {
+    color: #fff;
+    background-color: #343437;
+    border: 1px solid #5c5d60;
+
+    &:hover {
+      background-color: #fff;
+      color: #be0101;
+    }
+  }
+
+}
+@include rkCarousel1-01_theme();
+
+.rkCarousel1-01 {
+  
+  button {
+    cursor: pointer;
+
+    span {
+      vertical-align: middle;
+    }
+
+    svg {
+      @extend %display--inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.rkCarousel1_01_previous {
+  padding: 4px 4px 4px 0; /* trbl */
+}
+
+.rkCarousel1_01_next {
+  padding: 4px 0 4px 4px; /* trbl */
+} 
+
+.rkCarousel1-01_content {
+  height: 50px;
+}
+
+.rkCarousel1-01_pagination {
+  @extend %text--center;
+  padding: 6px 0 6px 0; /* trbl */
+}
+
+.rkCarousel1-01_pagebuttons {
+  @extend %display--inline-block;
+  @extend %padd--4;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.rkCarousel1-01_prevnext {
+  @extend %text--center; 
+}
