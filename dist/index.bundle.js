@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		1: 0
+/******/ 		2: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -142,7 +142,7 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -495,7 +495,7 @@ var warning = __webpack_require__(2);
 var canDefineProperty = __webpack_require__(7);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-var REACT_ELEMENT_TYPE = __webpack_require__(15);
+var REACT_ELEMENT_TYPE = __webpack_require__(16);
 
 var RESERVED_PROPS = {
   key: true,
@@ -1531,11 +1531,41 @@ module.exports = ReactComponentTreeHook;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.asyncComponent = exports.createAsyncContext = exports.AsyncComponentProvider = undefined;
+
+var _AsyncComponentProvider = __webpack_require__(27);
+
+var _AsyncComponentProvider2 = _interopRequireDefault(_AsyncComponentProvider);
+
+var _createAsyncContext = __webpack_require__(22);
+
+var _createAsyncContext2 = _interopRequireDefault(_createAsyncContext);
+
+var _asyncComponent = __webpack_require__(48);
+
+var _asyncComponent2 = _interopRequireDefault(_asyncComponent);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.AsyncComponentProvider = _AsyncComponentProvider2.default;
+exports.createAsyncContext = _createAsyncContext2.default;
+exports.asyncComponent = _asyncComponent2.default;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 module.exports = __webpack_require__(28);
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1554,10 +1584,10 @@ module.exports = __webpack_require__(28);
 var _prodInvariant = __webpack_require__(4),
     _assign = __webpack_require__(6);
 
-var ReactNoopUpdateQueue = __webpack_require__(13);
+var ReactNoopUpdateQueue = __webpack_require__(14);
 
 var canDefineProperty = __webpack_require__(7);
-var emptyObject = __webpack_require__(14);
+var emptyObject = __webpack_require__(15);
 var invariant = __webpack_require__(1);
 var lowPriorityWarning = __webpack_require__(9);
 
@@ -1684,7 +1714,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1785,7 +1815,7 @@ module.exports = ReactNoopUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1811,7 +1841,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1836,7 +1866,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1882,7 +1912,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1912,7 +1942,7 @@ var ReactElement = __webpack_require__(3);
 var checkReactTypeSpec = __webpack_require__(34);
 
 var canDefineProperty = __webpack_require__(7);
-var getIteratorFn = __webpack_require__(16);
+var getIteratorFn = __webpack_require__(17);
 var warning = __webpack_require__(2);
 var lowPriorityWarning = __webpack_require__(9);
 
@@ -2143,7 +2173,7 @@ module.exports = ReactElementValidator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2164,7 +2194,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2201,7 +2231,7 @@ if (process.env.NODE_ENV !== 'production') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2222,7 +2252,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2257,15 +2287,15 @@ function createAsyncContext() {
 }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(23);
+__webpack_require__(24);
 
-var _Home = __webpack_require__(24);
+var _Home = __webpack_require__(25);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -2274,13 +2304,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 ReactDOM.render(React.createElement(_Home2.default, null), document.getElementById('root'));
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2291,9 +2321,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Home;
 
-var _RkCarousel101_wrap = __webpack_require__(25);
+var _RkCarousel101_wrap = __webpack_require__(26);
 
 var _RkCarousel101_wrap2 = _interopRequireDefault(_RkCarousel101_wrap);
+
+var _RkCarousel102_wrap = __webpack_require__(49);
+
+var _RkCarousel102_wrap2 = _interopRequireDefault(_RkCarousel102_wrap);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2319,28 +2353,28 @@ function Home(props) {
         { className: "col-sm-9" },
         React.createElement(_RkCarousel101_wrap2.default, null)
       )
+    ),
+    React.createElement(
+      "h2",
+      { className: "item-id" },
+      "rkCarousel1-02"
+    ),
+    React.createElement(
+      "div",
+      { className: "row" },
+      React.createElement(
+        "div",
+        { className: "col-sm-3" },
+        "39"
+      ),
+      React.createElement(
+        "div",
+        { className: "col-sm-9" },
+        React.createElement(_RkCarousel102_wrap2.default, null)
+      )
     )
   );
 }
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _reactAsyncComponent = __webpack_require__(26);
-
-exports.default = (0, _reactAsyncComponent.asyncComponent)({
-  resolve: function resolve() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 49));
-  }
-}); // wrapper
 
 /***/ }),
 /* 26 */
@@ -2352,25 +2386,14 @@ exports.default = (0, _reactAsyncComponent.asyncComponent)({
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.asyncComponent = exports.createAsyncContext = exports.AsyncComponentProvider = undefined;
 
-var _AsyncComponentProvider = __webpack_require__(27);
+var _reactAsyncComponent = __webpack_require__(11);
 
-var _AsyncComponentProvider2 = _interopRequireDefault(_AsyncComponentProvider);
-
-var _createAsyncContext = __webpack_require__(21);
-
-var _createAsyncContext2 = _interopRequireDefault(_createAsyncContext);
-
-var _asyncComponent = __webpack_require__(48);
-
-var _asyncComponent2 = _interopRequireDefault(_asyncComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.AsyncComponentProvider = _AsyncComponentProvider2.default;
-exports.createAsyncContext = _createAsyncContext2.default;
-exports.asyncComponent = _asyncComponent2.default;
+exports.default = (0, _reactAsyncComponent.asyncComponent)({
+  resolve: function resolve() {
+    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 50));
+  }
+}); // wrapper
 
 /***/ }),
 /* 27 */
@@ -2385,15 +2408,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(11);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(19);
+var _propTypes = __webpack_require__(20);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _createAsyncContext = __webpack_require__(21);
+var _createAsyncContext = __webpack_require__(22);
 
 var _createAsyncContext2 = _interopRequireDefault(_createAsyncContext);
 
@@ -2492,7 +2515,7 @@ exports.default = AsyncComponentProvider;
 
 var _assign = __webpack_require__(6);
 
-var ReactBaseClasses = __webpack_require__(12);
+var ReactBaseClasses = __webpack_require__(13);
 var ReactChildren = __webpack_require__(29);
 var ReactDOMFactories = __webpack_require__(33);
 var ReactElement = __webpack_require__(3);
@@ -2509,7 +2532,7 @@ var cloneElement = ReactElement.cloneElement;
 if (process.env.NODE_ENV !== 'production') {
   var lowPriorityWarning = __webpack_require__(9);
   var canDefineProperty = __webpack_require__(7);
-  var ReactElementValidator = __webpack_require__(17);
+  var ReactElementValidator = __webpack_require__(18);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
   createFactory = ReactElementValidator.createFactory;
@@ -2945,9 +2968,9 @@ module.exports = PooledClass;
 var _prodInvariant = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(8);
-var REACT_ELEMENT_TYPE = __webpack_require__(15);
+var REACT_ELEMENT_TYPE = __webpack_require__(16);
 
-var getIteratorFn = __webpack_require__(16);
+var getIteratorFn = __webpack_require__(17);
 var invariant = __webpack_require__(1);
 var KeyEscapeUtils = __webpack_require__(32);
 var warning = __webpack_require__(2);
@@ -3197,7 +3220,7 @@ var ReactElement = __webpack_require__(3);
  */
 var createDOMFactory = ReactElement.createFactory;
 if (process.env.NODE_ENV !== 'production') {
-  var ReactElementValidator = __webpack_require__(17);
+  var ReactElementValidator = __webpack_require__(18);
   createDOMFactory = ReactElementValidator.createFactory;
 }
 
@@ -3564,7 +3587,7 @@ var emptyFunction = __webpack_require__(5);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
-var ReactPropTypesSecret = __webpack_require__(18);
+var ReactPropTypesSecret = __webpack_require__(19);
 var checkPropTypes = __webpack_require__(40);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
@@ -4083,7 +4106,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(1);
   var warning = __webpack_require__(2);
-  var ReactPropTypesSecret = __webpack_require__(18);
+  var ReactPropTypesSecret = __webpack_require__(19);
   var loggedTypeFailures = {};
 }
 
@@ -4169,13 +4192,13 @@ module.exports = '15.6.1';
 
 
 
-var _require = __webpack_require__(12),
+var _require = __webpack_require__(13),
     Component = _require.Component;
 
 var _require2 = __webpack_require__(3),
     isValidElement = _require2.isValidElement;
 
-var ReactNoopUpdateQueue = __webpack_require__(13);
+var ReactNoopUpdateQueue = __webpack_require__(14);
 var factory = __webpack_require__(43);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
@@ -4199,7 +4222,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 var _assign = __webpack_require__(6);
 
-var emptyObject = __webpack_require__(14);
+var emptyObject = __webpack_require__(15);
 var _invariant = __webpack_require__(1);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -5124,7 +5147,7 @@ var emptyFunction = __webpack_require__(5);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
-var ReactPropTypesSecret = __webpack_require__(20);
+var ReactPropTypesSecret = __webpack_require__(21);
 var checkPropTypes = __webpack_require__(46);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
@@ -5609,7 +5632,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(1);
   var warning = __webpack_require__(2);
-  var ReactPropTypesSecret = __webpack_require__(20);
+  var ReactPropTypesSecret = __webpack_require__(21);
   var loggedTypeFailures = {};
 }
 
@@ -5737,11 +5760,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _react = __webpack_require__(11);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(19);
+var _propTypes = __webpack_require__(20);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -5987,6 +6010,25 @@ function asyncComponent(config) {
 }
 
 exports.default = asyncComponent;
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactAsyncComponent = __webpack_require__(11);
+
+exports.default = (0, _reactAsyncComponent.asyncComponent)({
+  resolve: function resolve() {
+    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 51));
+  }
+}); // wrapper
 
 /***/ })
 /******/ ]);

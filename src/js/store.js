@@ -2,17 +2,17 @@ const store = {
   items: [
   {
     itemName: "item1",
-    description: "",
+    description: "desc1",
     imgSrc: ""
   }, 
   {
     itemName: "item2",
-    description: "",
+    description: "desc2",
     imgSrc: ""
   }, 
   {
     itemName: "item3",
-    description: "",
+    description: "desc3",
     imgSrc: ""
   }]
 };

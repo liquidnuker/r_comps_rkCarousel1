@@ -1,6 +1,6 @@
-webpackJsonp([0],{
+webpackJsonp([1],{
 
-/***/ 50:
+/***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24,7 +24,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function PrevButton(props) {
   return React.createElement(
     "button",
-    { className: "rkCarousel1_01_previous", onClick: props.pr_onClick },
+    { className: "rkCarousel1_02_previous", onClick: props.pr_onClick },
     React.createElement(
       "svg",
       { xmlns: "http://www.w3.org/2000/svg" },
@@ -41,7 +41,7 @@ function PrevButton(props) {
 function NextButton(props) {
   return React.createElement(
     "button",
-    { className: "rkCarousel1_01_next", onClick: props.pr_onClick },
+    { className: "rkCarousel1_02_next", onClick: props.pr_onClick },
     React.createElement(
       "span",
       null,
@@ -55,17 +55,20 @@ function NextButton(props) {
   );
 }
 
-var RkCarousel1_01 = function (_React$Component) {
-  _inherits(RkCarousel1_01, _React$Component);
+var RkCarousel1_02 = function (_React$Component) {
+  _inherits(RkCarousel1_02, _React$Component);
 
-  function RkCarousel1_01(props) {
-    _classCallCheck(this, RkCarousel1_01);
+  function RkCarousel1_02(props) {
+    _classCallCheck(this, RkCarousel1_02);
 
-    var _this = _possibleConstructorReturn(this, (RkCarousel1_01.__proto__ || Object.getPrototypeOf(RkCarousel1_01)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (RkCarousel1_02.__proto__ || Object.getPrototypeOf(RkCarousel1_02)).call(this, props));
 
     _this.state = {
       items: _store.store.items,
-      cIndex: 0
+      cIndex: 0,
+
+      isActive: null,
+      activePageButton: 0
     };
 
     // binders
@@ -77,14 +80,14 @@ var RkCarousel1_01 = function (_React$Component) {
   // methods
 
 
-  _createClass(RkCarousel1_01, [{
+  _createClass(RkCarousel1_02, [{
     key: "nextItem",
     value: function nextItem() {
       var state = this.state; // "this" remover
       state.cIndex = state.cIndex + 1;
       state.cIndex = state.cIndex % state.items.length; // go to first
-      // return state.items[state.cIndex];  
-      this.refresh();
+
+      this.setActivePageButton(state.cIndex);
     }
   }, {
     key: "prevItem",
@@ -94,13 +97,30 @@ var RkCarousel1_01 = function (_React$Component) {
         state.cIndex = state.items.length; // go to last
       }
       state.cIndex = state.cIndex - 1;
-      // return this.state.items[this.state.cIndex];
-      this.refresh();
+
+      this.setActivePageButton(state.cIndex);
     }
   }, {
     key: "customPage",
     value: function customPage(index) {
       this.state.cIndex = index;
+      this.setActivePageButton(index);
+    }
+  }, {
+    key: "setActivePageButton",
+    value: function setActivePageButton(index) {
+      var activeItem = index;
+      var state = this.state;
+
+      state.items[activeItem].isActive = true;
+
+      if (state.activePageButton !== activeItem) {
+        state.items[state.activePageButton].isActive = false;
+
+        // set current activePageButton
+        state.activePageButton = activeItem;
+      }
+
       this.refresh();
     }
   }, {
@@ -119,30 +139,30 @@ var RkCarousel1_01 = function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
+      var items = this.state.items;
+      var isActive = this.state.isActive;
+
       return React.createElement(
         "div",
-        { className: "rkCarousel1-01" },
+        { className: "rkCarousel1-02" },
         React.createElement(
           "div",
-          { className: "rkCarousel1-01_content" },
-          this.state.items[this.state.cIndex].itemName
+          { className: "rkCarousel1-02_content" },
+          items[this.state.cIndex].itemName
         ),
         React.createElement(
           "nav",
-          { className: "rkCarousel1-01_pagination" },
-          this.state.items.map(function (i, index) {
-            return React.createElement(
-              "button",
-              { className: "rkCarousel1-01_pagebuttons", onClick: function onClick() {
-                  _this3.customPage(index);
-                } },
-              index
-            );
+          { className: "rkCarousel1-02_pagination" },
+          items.map(function (i, index) {
+            return React.createElement("div", { className: items[index].isActive ? 'rkCarousel1-02_pagebuttons rkCarousel1-02_active' : 'rkCarousel1-02_pagebuttons',
+              onClick: function onClick() {
+                _this3.customPage(index);
+              } });
           })
         ),
         React.createElement(
           "div",
-          { className: "rkCarousel1-01_prevnext" },
+          { className: "rkCarousel1-02_prevnext" },
           React.createElement(PrevButton, { pr_onClick: function pr_onClick() {
               _this3.prevItem();
             } }),
@@ -154,10 +174,10 @@ var RkCarousel1_01 = function (_React$Component) {
     }
   }]);
 
-  return RkCarousel1_01;
+  return RkCarousel1_02;
 }(React.Component);
 
-exports.default = RkCarousel1_01;
+exports.default = RkCarousel1_02;
 
 /***/ }),
 

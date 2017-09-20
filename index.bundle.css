@@ -6,7 +6,7 @@
   .row:after {
     clear: both; }
 
-.btn, .rkCarousel1-01 button svg, .rkCarousel1-01_pagebuttons {
+.btn, .rkCarousel1-01 button svg, .rkCarousel1-01_pagebuttons, .rkCarousel1-02 button svg, .rkCarousel1-02_pagebuttons {
   display: inline-block; }
 
 input, textarea, select, html, body, div, span, applet, object, iframe,
@@ -31,7 +31,7 @@ input [type="button"],
 .btn1-01, .rkCarousel1-01_pagebuttons {
   padding: 4px; }
 
-.rkCarousel1-01_pagination, .rkCarousel1-01_prevnext {
+.rkCarousel1-01_pagination, .rkCarousel1-01_prevnext, .rkCarousel1-02_pagination, .rkCarousel1-02_prevnext {
   text-align: center; }
 
 *,
@@ -846,6 +846,66 @@ input [type="button"],
   /* trbl */ }
 
 .rkCarousel1-01_pagebuttons {
+  margin-right: 4px;
+  cursor: pointer; }
+
+.rkCarousel1-02 {
+  background-color: #2a2a2d;
+  color: #fff; }
+  .rkCarousel1-02 button {
+    background-color: #bab9b9;
+    border: 1px solid #000; }
+    .rkCarousel1-02 button svg {
+      fill: #fff; }
+    .rkCarousel1-02 button:hover {
+      background-color: #fff; }
+    .rkCarousel1-02 button:hover svg {
+      fill: #be0101; }
+
+.rkCarousel1-02_content {
+  background-color: #1c1d22; }
+
+.rkCarousel1-02_pagebuttons {
+  color: #fff;
+  background-color: #343437;
+  border: 1px solid #fff; }
+  .rkCarousel1-02_pagebuttons:hover {
+    background-color: #fff;
+    color: #be0101; }
+
+.rkCarousel1-02_active {
+  background-color: #be0101;
+  border: 1px solid #000; }
+
+.rkCarousel1-02 button {
+  border: 1px solid #000;
+  cursor: pointer; }
+  .rkCarousel1-02 button span {
+    vertical-align: middle; }
+  .rkCarousel1-02 button svg {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px; }
+
+.rkCarousel1_02_previous {
+  padding: 4px 4px 4px 0;
+  /* trbl */ }
+
+.rkCarousel1_02_next {
+  padding: 4px 0 4px 4px;
+  /* trbl */ }
+
+.rkCarousel1-02_pagination {
+  padding: 6px 0 6px 0;
+  /* trbl */ }
+
+.rkCarousel1-02_content {
+  height: 50px; }
+
+.rkCarousel1-02_pagebuttons {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
   margin-right: 4px;
   cursor: pointer; }
 
