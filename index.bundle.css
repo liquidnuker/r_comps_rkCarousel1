@@ -6,7 +6,10 @@
   .row:after {
     clear: both; }
 
-.btn, .rkCarousel1-01 button svg, .rkCarousel1-01_pagebuttons, .rkCarousel1-02 button svg, .rkCarousel1-02_pagebuttons {
+.rkCarousel1-03_description {
+  display: block; }
+
+.btn, .rkCarousel1-01 button svg, .rkCarousel1-01_pagebuttons, .rkCarousel1-02 button svg, .rkCarousel1-02_pagebuttons, .rkCarousel1-03 button svg, .rkCarousel1_03_pagebuttons {
   display: inline-block; }
 
 input, textarea, select, html, body, div, span, applet, object, iframe,
@@ -31,7 +34,7 @@ input [type="button"],
 .btn1-01, .rkCarousel1-01_pagebuttons {
   padding: 4px; }
 
-.rkCarousel1-01_pagination, .rkCarousel1-01_prevnext, .rkCarousel1-02_pagination, .rkCarousel1-02_prevnext {
+.rkCarousel1-01_pagination, .rkCarousel1-01_prevnext, .rkCarousel1-02_pagination, .rkCarousel1-02_prevnext, .rkCarousel1-03_pagination, .rkCarousel1-03_prevnext {
   text-align: center; }
 
 *,
@@ -908,6 +911,69 @@ input [type="button"],
   border-radius: 50%;
   margin-right: 4px;
   cursor: pointer; }
+
+.rkCarousel1-03 {
+  background-color: #2a2a2d;
+  color: #fff; }
+  .rkCarousel1-03 button {
+    background-color: #bab9b9;
+    border: 1px solid #000; }
+    .rkCarousel1-03 button svg {
+      fill: #fff; }
+    .rkCarousel1-03 button:hover {
+      background-color: #fff; }
+    .rkCarousel1-03 button:hover svg {
+      fill: #be0101; }
+
+.rkCarousel1-03_content {
+  background-color: #1c1d22; }
+
+.rkCarousel1_03_pagebuttons {
+  color: #fff;
+  background-color: #343437;
+  border: 1px solid #fff; }
+  .rkCarousel1_03_pagebuttons:hover {
+    background-color: #fff;
+    color: #be0101; }
+
+.rkCarousel1_03_active {
+  background-color: #be0101;
+  border: 1px solid #000; }
+
+.rkCarousel1-03_description {
+  border-top: 1px dashed #343437; }
+
+.rkCarousel1-03 button {
+  border: 1px solid #000;
+  cursor: pointer; }
+  .rkCarousel1-03 button span {
+    vertical-align: middle; }
+  .rkCarousel1-03 button svg {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px; }
+
+.rkCarousel1_03_previous {
+  padding: 4px 4px 4px 0;
+  /* trbl */ }
+
+.rkCarousel1_03_next {
+  padding: 4px 0 4px 4px;
+  /* trbl */ }
+
+.rkCarousel1-03_pagination {
+  padding: 4px 0 4px 0;
+  /* trbl */ }
+
+.rkCarousel1_03_pagebuttons {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 4px;
+  cursor: pointer; }
+
+.rkCarousel1-03_description {
+  height: 50px; }
 
 [class|="col"] {
   position: relative;

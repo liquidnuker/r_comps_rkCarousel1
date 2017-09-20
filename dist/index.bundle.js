@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		2: 0
+/******/ 		3: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -1073,6 +1073,36 @@ module.exports = ReactCurrentOwner;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.asyncComponent = exports.createAsyncContext = exports.AsyncComponentProvider = undefined;
+
+var _AsyncComponentProvider = __webpack_require__(27);
+
+var _AsyncComponentProvider2 = _interopRequireDefault(_AsyncComponentProvider);
+
+var _createAsyncContext = __webpack_require__(22);
+
+var _createAsyncContext2 = _interopRequireDefault(_createAsyncContext);
+
+var _asyncComponent = __webpack_require__(48);
+
+var _asyncComponent2 = _interopRequireDefault(_asyncComponent);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.AsyncComponentProvider = _AsyncComponentProvider2.default;
+exports.createAsyncContext = _createAsyncContext2.default;
+exports.asyncComponent = _asyncComponent2.default;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -1140,7 +1170,7 @@ module.exports = lowPriorityWarning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1525,36 +1555,6 @@ module.exports = ReactComponentTreeHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.asyncComponent = exports.createAsyncContext = exports.AsyncComponentProvider = undefined;
-
-var _AsyncComponentProvider = __webpack_require__(27);
-
-var _AsyncComponentProvider2 = _interopRequireDefault(_AsyncComponentProvider);
-
-var _createAsyncContext = __webpack_require__(22);
-
-var _createAsyncContext2 = _interopRequireDefault(_createAsyncContext);
-
-var _asyncComponent = __webpack_require__(48);
-
-var _asyncComponent2 = _interopRequireDefault(_asyncComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.AsyncComponentProvider = _AsyncComponentProvider2.default;
-exports.createAsyncContext = _createAsyncContext2.default;
-exports.asyncComponent = _asyncComponent2.default;
-
-/***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1589,7 +1589,7 @@ var ReactNoopUpdateQueue = __webpack_require__(14);
 var canDefineProperty = __webpack_require__(7);
 var emptyObject = __webpack_require__(15);
 var invariant = __webpack_require__(1);
-var lowPriorityWarning = __webpack_require__(9);
+var lowPriorityWarning = __webpack_require__(10);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -1936,7 +1936,7 @@ module.exports = getIteratorFn;
 
 
 var ReactCurrentOwner = __webpack_require__(8);
-var ReactComponentTreeHook = __webpack_require__(10);
+var ReactComponentTreeHook = __webpack_require__(11);
 var ReactElement = __webpack_require__(3);
 
 var checkReactTypeSpec = __webpack_require__(34);
@@ -1944,7 +1944,7 @@ var checkReactTypeSpec = __webpack_require__(34);
 var canDefineProperty = __webpack_require__(7);
 var getIteratorFn = __webpack_require__(17);
 var warning = __webpack_require__(2);
-var lowPriorityWarning = __webpack_require__(9);
+var lowPriorityWarning = __webpack_require__(10);
 
 function getDeclarationErrorAddendum() {
   if (ReactCurrentOwner.current) {
@@ -2329,6 +2329,10 @@ var _RkCarousel102_wrap = __webpack_require__(49);
 
 var _RkCarousel102_wrap2 = _interopRequireDefault(_RkCarousel102_wrap);
 
+var _RkCarousel103_wrap = __webpack_require__(50);
+
+var _RkCarousel103_wrap2 = _interopRequireDefault(_RkCarousel103_wrap);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home(props) {
@@ -2372,6 +2376,25 @@ function Home(props) {
         { className: "col-sm-9" },
         React.createElement(_RkCarousel102_wrap2.default, null)
       )
+    ),
+    React.createElement(
+      "h2",
+      { className: "item-id" },
+      "rkCarousel1-03"
+    ),
+    React.createElement(
+      "div",
+      { className: "row" },
+      React.createElement(
+        "div",
+        { className: "col-sm-3" },
+        "39"
+      ),
+      React.createElement(
+        "div",
+        { className: "col-sm-9" },
+        React.createElement(_RkCarousel103_wrap2.default, null)
+      )
     )
   );
 }
@@ -2387,11 +2410,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactAsyncComponent = __webpack_require__(11);
+var _reactAsyncComponent = __webpack_require__(9);
 
 exports.default = (0, _reactAsyncComponent.asyncComponent)({
   resolve: function resolve() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 50));
+    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 51));
   }
 }); // wrapper
 
@@ -2530,7 +2553,7 @@ var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var lowPriorityWarning = __webpack_require__(9);
+  var lowPriorityWarning = __webpack_require__(10);
   var canDefineProperty = __webpack_require__(7);
   var ReactElementValidator = __webpack_require__(18);
   var didWarnPropTypesDeprecated = false;
@@ -3402,7 +3425,7 @@ if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 't
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(10);
+  ReactComponentTreeHook = __webpack_require__(11);
 }
 
 var loggedTypeFailures = {};
@@ -3444,7 +3467,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
         if (process.env.NODE_ENV !== 'production') {
           if (!ReactComponentTreeHook) {
-            ReactComponentTreeHook = __webpack_require__(10);
+            ReactComponentTreeHook = __webpack_require__(11);
           }
           if (debugID !== null) {
             componentStackInfo = ReactComponentTreeHook.getStackAddendumByID(debugID);
@@ -6022,11 +6045,30 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactAsyncComponent = __webpack_require__(11);
+var _reactAsyncComponent = __webpack_require__(9);
 
 exports.default = (0, _reactAsyncComponent.asyncComponent)({
   resolve: function resolve() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 51));
+    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 52));
+  }
+}); // wrapper
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactAsyncComponent = __webpack_require__(9);
+
+exports.default = (0, _reactAsyncComponent.asyncComponent)({
+  resolve: function resolve() {
+    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 53));
   }
 }); // wrapper
 

@@ -1,6 +1,6 @@
-webpackJsonp([0],{
+webpackJsonp([2],{
 
-/***/ 51:
+/***/ 52:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12,19 +12,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _store = __webpack_require__(54);
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // use export default for async wrap
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// use export default for async wrap
+// import {store} from "../js/store.js";
 
 function PrevButton(props) {
   return React.createElement(
     "button",
-    { className: "rkCarousel1_01_previous", onClick: props.pr_onClick },
+    { className: "rkCarousel1_02_previous", onClick: props.pr_onClick },
     React.createElement(
       "svg",
       { xmlns: "http://www.w3.org/2000/svg" },
@@ -41,7 +41,7 @@ function PrevButton(props) {
 function NextButton(props) {
   return React.createElement(
     "button",
-    { className: "rkCarousel1_01_next", onClick: props.pr_onClick },
+    { className: "rkCarousel1_02_next", onClick: props.pr_onClick },
     React.createElement(
       "span",
       null,
@@ -55,17 +55,33 @@ function NextButton(props) {
   );
 }
 
-var RkCarousel1_01 = function (_React$Component) {
-  _inherits(RkCarousel1_01, _React$Component);
+var RkCarousel1_02 = function (_React$Component) {
+  _inherits(RkCarousel1_02, _React$Component);
 
-  function RkCarousel1_01(props) {
-    _classCallCheck(this, RkCarousel1_01);
+  function RkCarousel1_02(props) {
+    _classCallCheck(this, RkCarousel1_02);
 
-    var _this = _possibleConstructorReturn(this, (RkCarousel1_01.__proto__ || Object.getPrototypeOf(RkCarousel1_01)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (RkCarousel1_02.__proto__ || Object.getPrototypeOf(RkCarousel1_02)).call(this, props));
 
     _this.state = {
-      items: _store.store.items,
-      cIndex: 0
+      items: [{
+        itemName: "item1",
+        description: "desc1",
+        imgSrc: "",
+        isActive: true
+      }, {
+        itemName: "item2",
+        description: "desc2",
+        imgSrc: "",
+        isActive: false
+      }, {
+        itemName: "item3",
+        description: "desc3",
+        imgSrc: "",
+        isActive: false
+      }],
+      cIndex: 0,
+      activePageButton: 0
     };
 
     // binders
@@ -77,14 +93,14 @@ var RkCarousel1_01 = function (_React$Component) {
   // methods
 
 
-  _createClass(RkCarousel1_01, [{
+  _createClass(RkCarousel1_02, [{
     key: "nextItem",
     value: function nextItem() {
       var state = this.state; // "this" remover
       state.cIndex = state.cIndex + 1;
       state.cIndex = state.cIndex % state.items.length; // go to first
-      // return state.items[state.cIndex];  
-      this.refresh();
+
+      this.setActivePageButton(state.cIndex);
     }
   }, {
     key: "prevItem",
@@ -94,13 +110,30 @@ var RkCarousel1_01 = function (_React$Component) {
         state.cIndex = state.items.length; // go to last
       }
       state.cIndex = state.cIndex - 1;
-      // return this.state.items[this.state.cIndex];
-      this.refresh();
+
+      this.setActivePageButton(state.cIndex);
     }
   }, {
     key: "customPage",
     value: function customPage(index) {
       this.state.cIndex = index;
+      this.setActivePageButton(index);
+    }
+  }, {
+    key: "setActivePageButton",
+    value: function setActivePageButton(index) {
+      var activeItem = index;
+      var state = this.state;
+
+      state.items[activeItem].isActive = true;
+
+      if (state.activePageButton !== activeItem) {
+        state.items[state.activePageButton].isActive = false;
+
+        // set current activePageButton
+        state.activePageButton = activeItem;
+      }
+
       this.refresh();
     }
   }, {
@@ -119,30 +152,30 @@ var RkCarousel1_01 = function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
+      var items = this.state.items;
+      var isActive = this.state.isActive;
+
       return React.createElement(
         "div",
-        { className: "rkCarousel1-01" },
+        { className: "rkCarousel1-02" },
         React.createElement(
           "div",
-          { className: "rkCarousel1-01_content" },
-          this.state.items[this.state.cIndex].itemName
+          { className: "rkCarousel1-02_content" },
+          items[this.state.cIndex].itemName
         ),
         React.createElement(
           "nav",
-          { className: "rkCarousel1-01_pagination" },
-          this.state.items.map(function (i, index) {
-            return React.createElement(
-              "button",
-              { className: "rkCarousel1-01_pagebuttons", onClick: function onClick() {
-                  _this3.customPage(index);
-                } },
-              index
-            );
+          { className: "rkCarousel1-02_pagination" },
+          items.map(function (i, index) {
+            return React.createElement("div", { className: items[index].isActive ? 'rkCarousel1-02_pagebuttons rkCarousel1-02_active' : 'rkCarousel1-02_pagebuttons',
+              onClick: function onClick() {
+                _this3.customPage(index);
+              } });
           })
         ),
         React.createElement(
           "div",
-          { className: "rkCarousel1-01_prevnext" },
+          { className: "rkCarousel1-02_prevnext" },
           React.createElement(PrevButton, { pr_onClick: function pr_onClick() {
               _this3.prevItem();
             } }),
@@ -154,42 +187,10 @@ var RkCarousel1_01 = function (_React$Component) {
     }
   }]);
 
-  return RkCarousel1_01;
+  return RkCarousel1_02;
 }(React.Component);
 
-exports.default = RkCarousel1_01;
-
-/***/ }),
-
-/***/ 54:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var store = {
-  items: [{
-    itemName: "item1",
-    description: "desc1",
-    imgSrc: "",
-    isActive: false
-  }, {
-    itemName: "item2",
-    description: "desc2",
-    imgSrc: "",
-    isActive: false
-  }, {
-    itemName: "item3",
-    description: "desc3",
-    imgSrc: "",
-    isActive: false
-  }]
-};
-
-exports.store = store;
+exports.default = RkCarousel1_02;
 
 /***/ })
 

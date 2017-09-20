@@ -191,3 +191,118 @@
 .rkCarousel1-02_prevnext {
   @extend %text--center;
 }
+
+// rkCarousel1-03
+// ==================================================/
+@mixin rkCarousel1-03_theme() {
+  .rkCarousel1-03 {
+    background-color: #2a2a2d;
+    color: #fff;
+    
+    button {
+      background-color: #bab9b9;
+      border: 1px solid #000;
+
+      svg {
+        fill: #fff;
+      }
+
+      &:hover {
+        background-color: #fff;
+      }
+
+      &:hover svg {
+        fill: #be0101;
+      }
+    }
+  }
+
+  .rkCarousel1-03_content {
+    background-color: #1c1d22;
+  }
+
+  .rkCarousel1_03_pagebuttons {
+    color: #fff;
+    background-color: #343437;
+    border: 1px solid #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #be0101;
+    }
+  }
+
+  .rkCarousel1_03_active {
+    background-color: #be0101;
+    border: 1px solid #000;
+  }
+
+  .rkCarousel1-03_description {
+    border-top: 1px dashed #343437;
+  }
+}
+@include rkCarousel1-03_theme();
+
+@mixin rkCarousel1_03_pagebuttons() {
+  $size: 12px;
+  width: $size;
+  height: $size;
+}
+
+.rkCarousel1-03 {
+  // height: 100px; 
+
+  button {
+    border: 1px solid #000; 
+    cursor: pointer;
+
+    span {
+      vertical-align: middle;
+    }
+
+    svg {
+      @extend %display--inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.rkCarousel1_03_previous {
+  padding: 4px 4px 4px 0; /* trbl */
+}
+
+.rkCarousel1_03_next {
+  padding: 4px 0 4px 4px; /* trbl */
+} 
+
+.rkCarousel1-03_pagination {
+  @extend %text--center;
+  padding: 4px 0 4px 0; /* trbl */
+}
+
+.rkCarousel1_03_pagebuttons {
+  @extend %display--inline-block;
+  @include rkCarousel1_03_pagebuttons();
+  border-radius: 50%;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.rkCarousel1_03_active {
+  
+}
+
+.rkCarousel1-03_content {
+  
+}
+
+.rkCarousel1-03_description {
+  @extend %display--block;
+  height: 50px;
+}
+
+.rkCarousel1-03_prevnext {
+  @extend %text--center;
+}
