@@ -3,7 +3,7 @@
 
 function PrevButton(props) {
   return (
-    <button className="rkCarousel1_03_previous" onClick={props.pr_onClick}>
+    <button className="rkCarousel103_previous" onClick={props.pr_onClick}>
     <svg xmlns="http://www.w3.org/2000/svg">
       <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     </svg>
@@ -14,7 +14,7 @@ function PrevButton(props) {
 
 function NextButton(props) {
   return (
-    <button className="rkCarousel1_03_next" onClick={props.pr_onClick}>
+    <button className="rkCarousel103_next" onClick={props.pr_onClick}>
     <span>Next</span>
     <svg xmlns="http://www.w3.org/2000/svg">
       <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
@@ -23,7 +23,7 @@ function NextButton(props) {
   );
 }
 
-export default class RkCarousel1_03 extends React.Component {
+export default class RkCarousel103 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -106,24 +106,24 @@ export default class RkCarousel1_03 extends React.Component {
     const isActive = this.state.isActive;
 
     return (
-      <div className="rkCarousel1-03">
-      <div className="rkCarousel1-03_content">
+      <div className="rkCarousel103">
+      <div className="rkCarousel103_content">
       {items[this.state.cIndex].itemName}<br />
       <span class="carousel1-03_description">
         {items[this.state.cIndex].description}
       </span>
       </div>
 
-      <nav className="rkCarousel1-03_pagination">
+      <nav className="rkCarousel103_pagination">
       {items.map((i, index) =>
         <div className={ items[index].isActive 
-          ? 'rkCarousel1_03_pagebuttons rkCarousel1_03_active': 'rkCarousel1_03_pagebuttons' } 
+          ? 'rkCarousel103_pagebuttons rkCarousel103_active': 'rkCarousel103_pagebuttons' } 
           onClick={() => { this.customPage(index) }}>
           </div>
           )}
       </nav>
 
-      <div className="rkCarousel1-03_prevnext">
+      <div className="rkCarousel103_prevnext">
       <PrevButton pr_onClick={() => { this.prevItem() }} />
       <NextButton pr_onClick={() => { this.nextItem() }} />
       </div>

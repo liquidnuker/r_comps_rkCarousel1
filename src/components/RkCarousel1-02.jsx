@@ -3,7 +3,7 @@
 
 function PrevButton(props) {
   return (
-    <button className="rkCarousel1_02_previous" onClick={props.pr_onClick}>
+    <button className="rkCarousel102_previous" onClick={props.pr_onClick}>
     <svg xmlns="http://www.w3.org/2000/svg">
       <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     </svg>
@@ -14,7 +14,7 @@ function PrevButton(props) {
 
 function NextButton(props) {
   return (
-    <button className="rkCarousel1_02_next" onClick={props.pr_onClick}>
+    <button className="rkCarousel102_next" onClick={props.pr_onClick}>
     <span>Next</span>
     <svg xmlns="http://www.w3.org/2000/svg">
       <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
@@ -23,7 +23,7 @@ function NextButton(props) {
   );
 }
 
-export default class RkCarousel1_02 extends React.Component {
+export default class RkCarousel102 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -106,21 +106,21 @@ export default class RkCarousel1_02 extends React.Component {
     const isActive = this.state.isActive;
 
     return (
-      <div className="rkCarousel1-02">
-      <div className="rkCarousel1-02_content">
+      <div className="rkCarousel102">
+      <div className="rkCarousel102_content">
       {items[this.state.cIndex].itemName}
       </div>
 
-      <nav className="rkCarousel1-02_pagination">
+      <nav className="rkCarousel102_pagination">
       {items.map((i, index) =>
         <div className={ items[index].isActive 
-          ? 'rkCarousel1-02_pagebuttons rkCarousel1-02_active': 'rkCarousel1-02_pagebuttons' } 
+          ? 'rkCarousel102_pagebuttons rkCarousel102_active': 'rkCarousel102_pagebuttons' } 
           onClick={() => { this.customPage(index) }}>
           </div>
           )}
       </nav>
 
-      <div className="rkCarousel1-02_prevnext">
+      <div className="rkCarousel102_prevnext">
       <PrevButton pr_onClick={() => { this.prevItem() }} />
       <NextButton pr_onClick={() => { this.nextItem() }} />
       </div>

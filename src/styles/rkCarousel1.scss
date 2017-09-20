@@ -1,5 +1,5 @@
-@mixin rkCarousel1-01_theme() {
-  .rkCarousel1-01 {
+@mixin rkCarousel101_theme() {
+  .rkCarousel101 {
     background-color: #2a2a2d;
     color: #fff;
 
@@ -21,11 +21,11 @@
     }
   }
 
-  .rkCarousel1-01_content {
+  .rkCarousel101_content {
     background-color: #1c1d22;
   }
 
-  .rkCarousel1-01_pagebuttons {
+  .rkCarousel101_pagebuttons {
     color: #fff;
     background-color: #343437;
     border: 1px solid #5c5d60;
@@ -37,9 +37,9 @@
   }
 
 }
-@include rkCarousel1-01_theme();
+@include rkCarousel101_theme();
 
-.rkCarousel1-01 {
+.rkCarousel101 {
   
   button {
     cursor: pointer;
@@ -57,38 +57,38 @@
   }
 }
 
-.rkCarousel1_01_previous {
+.rkCarousel101_previous {
   padding: 4px 4px 4px 0; /* trbl */
 }
 
-.rkCarousel1_01_next {
+.rkCarousel101_next {
   padding: 4px 0 4px 4px; /* trbl */
 } 
 
-.rkCarousel1-01_content {
+.rkCarousel101_content {
   height: 50px;
 }
 
-.rkCarousel1-01_pagination {
+.rkCarousel101_pagination {
   @extend %text--center;
   padding: 6px 0 6px 0; /* trbl */
 }
 
-.rkCarousel1-01_pagebuttons {
+.rkCarousel101_pagebuttons {
   @extend %display--inline-block;
   @extend %padd--4;
   margin-right: 4px;
   cursor: pointer;
 }
 
-.rkCarousel1-01_prevnext {
+.rkCarousel101_prevnext {
   @extend %text--center; 
 }
 
-// rkCarousel1-02
+// rkCarousel102
 // ==================================================/
-@mixin rkCarousel1-02_theme() {
-  .rkCarousel1-02 {
+@mixin rkCarousel102_theme() {
+  .rkCarousel102 {
     background-color: #2a2a2d;
     color: #fff;
 
@@ -110,11 +110,11 @@
     }
   }
 
-  .rkCarousel1-02_content {
+  .rkCarousel102_content {
     background-color: #1c1d22;
   }
 
-  .rkCarousel1-02_pagebuttons {
+  .rkCarousel102_pagebuttons {
     color: #fff;
     background-color: #343437;
     border: 1px solid #fff;
@@ -125,21 +125,21 @@
     }
   }
 
-  .rkCarousel1-02_active {
+  .rkCarousel102_active {
     background-color: #be0101;
     border: 1px solid #000;
   }
 }
-@include rkCarousel1-02_theme();
+@include rkCarousel102_theme();
 
 
-@mixin rkCarousel1-02_pagebuttons() {
+@mixin rkCarousel102_pagebuttons() {
   $size: 12px;
   width: $size;
   height: $size;
 }
 
-.rkCarousel1-02 {
+.rkCarousel102 {
   // height: 100px; 
 
   button {
@@ -159,43 +159,43 @@
   }
 }
 
-.rkCarousel1_02_previous {
+.rkCarousel102_previous {
   padding: 4px 4px 4px 0; /* trbl */
 }
 
-.rkCarousel1_02_next {
+.rkCarousel102_next {
   padding: 4px 0 4px 4px; /* trbl */
 } 
 
-.rkCarousel1-02_pagination {
+.rkCarousel102_pagination {
   @extend %text--center;
   padding: 6px 0 6px 0; /* trbl */  
 }
 
-.rkCarousel1-02_content {
+.rkCarousel102_content {
   height: 50px;
 }
 
-.rkCarousel1-02_pagebuttons {
+.rkCarousel102_pagebuttons {
   @extend %display--inline-block; 
-  @include rkCarousel1-02_pagebuttons(); 
+  @include rkCarousel102_pagebuttons(); 
   border-radius: 50%;
   margin-right: 4px;   
   cursor: pointer; 
 }
 
-.rkCarousel1-02_active {
+.rkCarousel102_active {
   
 }
 
-.rkCarousel1-02_prevnext {
+.rkCarousel102_prevnext {
   @extend %text--center;
 }
 
-// rkCarousel1-03
+// rkCarousel103
 // ==================================================/
-@mixin rkCarousel1-03_theme() {
-  .rkCarousel1-03 {
+@mixin rkCarousel103_theme() {
+  .rkCarousel103 {
     background-color: #2a2a2d;
     color: #fff;
     
@@ -217,11 +217,11 @@
     }
   }
 
-  .rkCarousel1-03_content {
+  .rkCarousel103_content {
     background-color: #1c1d22;
   }
 
-  .rkCarousel1_03_pagebuttons {
+  .rkCarousel103_pagebuttons {
     color: #fff;
     background-color: #343437;
     border: 1px solid #fff;
@@ -232,24 +232,24 @@
     }
   }
 
-  .rkCarousel1_03_active {
+  .rkCarousel103_active {
     background-color: #be0101;
     border: 1px solid #000;
   }
 
-  .rkCarousel1-03_description {
+  .rkCarousel103_description {
     border-top: 1px dashed #343437;
   }
 }
-@include rkCarousel1-03_theme();
+@include rkCarousel103_theme();
 
-@mixin rkCarousel1_03_pagebuttons() {
+@mixin rkCarousel103_pagebuttons() {
   $size: 12px;
   width: $size;
   height: $size;
 }
 
-.rkCarousel1-03 {
+.rkCarousel103 {
   // height: 100px; 
 
   button {
@@ -269,41 +269,41 @@
   }
 }
 
-.rkCarousel1_03_previous {
+.rkCarousel103_previous {
   padding: 4px 4px 4px 0; /* trbl */
 }
 
-.rkCarousel1_03_next {
+.rkCarousel103_next {
   padding: 4px 0 4px 4px; /* trbl */
 } 
 
-.rkCarousel1-03_pagination {
+.rkCarousel103_pagination {
   @extend %text--center;
   padding: 4px 0 4px 0; /* trbl */
 }
 
-.rkCarousel1_03_pagebuttons {
+.rkCarousel103_pagebuttons {
   @extend %display--inline-block;
-  @include rkCarousel1_03_pagebuttons();
+  @include rkCarousel103_pagebuttons();
   border-radius: 50%;
   margin-right: 4px;
   cursor: pointer;
 }
 
-.rkCarousel1_03_active {
+.rkCarousel103_active {
   
 }
 
-.rkCarousel1-03_content {
+.rkCarousel103_content {
   
 }
 
-.rkCarousel1-03_description {
+.rkCarousel103_description {
   @extend %display--block;
   height: 50px;
 }
 
-.rkCarousel1-03_prevnext {
+.rkCarousel103_prevnext {
   @extend %text--center;
 }
 

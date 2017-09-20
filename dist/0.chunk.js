@@ -24,7 +24,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function PrevButton(props) {
   return React.createElement(
     "button",
-    { className: "rkCarousel1_01_previous", onClick: props.pr_onClick },
+    { className: "rkCarousel101_previous", onClick: props.pr_onClick },
     React.createElement(
       "svg",
       { xmlns: "http://www.w3.org/2000/svg" },
@@ -41,7 +41,7 @@ function PrevButton(props) {
 function NextButton(props) {
   return React.createElement(
     "button",
-    { className: "rkCarousel1_01_next", onClick: props.pr_onClick },
+    { className: "rkCarousel101_next", onClick: props.pr_onClick },
     React.createElement(
       "span",
       null,
@@ -55,13 +55,13 @@ function NextButton(props) {
   );
 }
 
-var RkCarousel1_01 = function (_React$Component) {
-  _inherits(RkCarousel1_01, _React$Component);
+var RkCarousel101 = function (_React$Component) {
+  _inherits(RkCarousel101, _React$Component);
 
-  function RkCarousel1_01(props) {
-    _classCallCheck(this, RkCarousel1_01);
+  function RkCarousel101(props) {
+    _classCallCheck(this, RkCarousel101);
 
-    var _this = _possibleConstructorReturn(this, (RkCarousel1_01.__proto__ || Object.getPrototypeOf(RkCarousel1_01)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (RkCarousel101.__proto__ || Object.getPrototypeOf(RkCarousel101)).call(this, props));
 
     _this.state = {
       items: _store.store.items,
@@ -77,7 +77,7 @@ var RkCarousel1_01 = function (_React$Component) {
   // methods
 
 
-  _createClass(RkCarousel1_01, [{
+  _createClass(RkCarousel101, [{
     key: "nextItem",
     value: function nextItem() {
       var state = this.state; // "this" remover
@@ -121,19 +121,19 @@ var RkCarousel1_01 = function (_React$Component) {
 
       return React.createElement(
         "div",
-        { className: "rkCarousel1-01" },
+        { className: "rkCarousel101" },
         React.createElement(
           "div",
-          { className: "rkCarousel1-01_content" },
+          { className: "rkCarousel101_content" },
           this.state.items[this.state.cIndex].itemName
         ),
         React.createElement(
           "nav",
-          { className: "rkCarousel1-01_pagination" },
+          { className: "rkCarousel101_pagination" },
           this.state.items.map(function (i, index) {
             return React.createElement(
               "button",
-              { className: "rkCarousel1-01_pagebuttons", onClick: function onClick() {
+              { className: "rkCarousel101_pagebuttons", onClick: function onClick() {
                   _this3.customPage(index);
                 } },
               index
@@ -142,7 +142,7 @@ var RkCarousel1_01 = function (_React$Component) {
         ),
         React.createElement(
           "div",
-          { className: "rkCarousel1-01_prevnext" },
+          { className: "rkCarousel101_prevnext" },
           React.createElement(PrevButton, { pr_onClick: function pr_onClick() {
               _this3.prevItem();
             } }),
@@ -154,10 +154,10 @@ var RkCarousel1_01 = function (_React$Component) {
     }
   }]);
 
-  return RkCarousel1_01;
+  return RkCarousel101;
 }(React.Component);
 
-exports.default = RkCarousel1_01;
+exports.default = RkCarousel101;
 
 /***/ }),
 
