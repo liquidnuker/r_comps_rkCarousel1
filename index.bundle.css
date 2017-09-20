@@ -6,10 +6,18 @@
   .row:after {
     clear: both; }
 
+.rkCarousel104_pagination {
+  position: absolute; }
+
+.rkCarousel104, .rkCarousel104_previous,
+.rkCarousel104_next {
+  position: relative; }
+
 .rkCarousel1-03_description {
   display: block; }
 
-.btn, .rkCarousel1-01 button svg, .rkCarousel1-01_pagebuttons, .rkCarousel1-02 button svg, .rkCarousel1-02_pagebuttons, .rkCarousel1-03 button svg, .rkCarousel1_03_pagebuttons {
+.btn, .rkCarousel1-01 button svg, .rkCarousel1-01_pagebuttons, .rkCarousel1-02 button svg, .rkCarousel1-02_pagebuttons, .rkCarousel1-03 button svg, .rkCarousel1_03_pagebuttons, .rkCarousel104_pagebuttons, .rkCarousel104_previous,
+.rkCarousel104_next {
   display: inline-block; }
 
 input, textarea, select, html, body, div, span, applet, object, iframe,
@@ -34,7 +42,7 @@ input [type="button"],
 .btn1-01, .rkCarousel1-01_pagebuttons {
   padding: 4px; }
 
-.rkCarousel1-01_pagination, .rkCarousel1-01_prevnext, .rkCarousel1-02_pagination, .rkCarousel1-02_prevnext, .rkCarousel1-03_pagination, .rkCarousel1-03_prevnext {
+.rkCarousel1-01_pagination, .rkCarousel1-01_prevnext, .rkCarousel1-02_pagination, .rkCarousel1-02_prevnext, .rkCarousel1-03_pagination, .rkCarousel1-03_prevnext, .rkCarousel104_pagination {
   text-align: center; }
 
 *,
@@ -974,6 +982,104 @@ input [type="button"],
 
 .rkCarousel1-03_description {
   height: 50px; }
+
+.rkCarousel104 {
+  background-color: #2a2a2d;
+  color: #fff; }
+
+.rkCarousel104_pagebuttons {
+  color: #fff;
+  background-color: #bab9b9;
+  border: 1px solid #fff; }
+  .rkCarousel104_pagebuttons:hover {
+    background-color: #fff; }
+
+.rkCarousel104_active {
+  background-color: #be0101;
+  border: 1px solid #000; }
+
+.rkCarousel104_description {
+  border-top: 1px dashed #343437; }
+
+.rkCarousel104_content {
+  background-color: #1c1d22; }
+
+.rkCarousel104_previous,
+.rkCarousel104_next {
+  color: #fff;
+  background-color: #343437;
+  border: 1px solid #5c5d60; }
+  .rkCarousel104_previous svg,
+  .rkCarousel104_next svg {
+    fill: #fff; }
+  .rkCarousel104_previous:hover,
+  .rkCarousel104_next:hover {
+    background-color: #fff;
+    border: none; }
+  .rkCarousel104_previous:hover svg,
+  .rkCarousel104_next:hover svg {
+    fill: #be0101; }
+
+.rkCarousel104:hover .rkCarousel104_prevnext {
+  visibility: visible; }
+
+.rkCarousel104_pagebuttons {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 4px;
+  cursor: pointer; }
+
+.rkCarousel104_items {
+  height: 0;
+  opacity: 0;
+  transition: visibility 4s, opacity 0.5s ease-in; }
+
+.rkCarousel104_items--active {
+  height: auto;
+  visibility: visible;
+  opacity: 1; }
+
+.rkCarousel104_description {
+  height: 100px; }
+
+.rkCarousel104_pagination {
+  width: 100%;
+  bottom: 10%;
+  z-index: 3; }
+
+.rkCarousel104_prevnext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 2; }
+
+.rkCarousel104_previous,
+.rkCarousel104_next {
+  padding: 10px;
+  height: 100%;
+  cursor: pointer; }
+  .rkCarousel104_previous svg,
+  .rkCarousel104_next svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.rkCarousel104_next {
+  float: right; }
+
+.rkCarousel104_chevron {
+  width: 24px;
+  height: 24px; }
 
 [class|="col"] {
   position: relative;

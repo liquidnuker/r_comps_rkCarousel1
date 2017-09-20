@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 53:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23,45 +23,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function PrevButton(props) {
   return React.createElement(
-    "button",
-    { className: "rkCarousel1_03_previous", onClick: props.pr_onClick },
+    "span",
+    { className: "rkCarousel104_previous", onClick: props.pr_onClick },
     React.createElement(
       "svg",
-      { xmlns: "http://www.w3.org/2000/svg" },
+      { xmlns: "http://www.w3.org/2000/svg", className: "rkCarousel104_chevron" },
       React.createElement("path", { d: "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" })
-    ),
-    React.createElement(
-      "span",
-      null,
-      "Previous"
     )
   );
 }
 
 function NextButton(props) {
   return React.createElement(
-    "button",
-    { className: "rkCarousel1_03_next", onClick: props.pr_onClick },
-    React.createElement(
-      "span",
-      null,
-      "Next"
-    ),
+    "span",
+    { className: "rkCarousel104_next", onClick: props.pr_onClick },
     React.createElement(
       "svg",
-      { xmlns: "http://www.w3.org/2000/svg" },
+      { xmlns: "http://www.w3.org/2000/svg", className: "rkCarousel104_chevron" },
       React.createElement("path", { d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" })
     )
   );
 }
 
-var RkCarousel1_03 = function (_React$Component) {
-  _inherits(RkCarousel1_03, _React$Component);
+var RkCarousel104 = function (_React$Component) {
+  _inherits(RkCarousel104, _React$Component);
 
-  function RkCarousel1_03(props) {
-    _classCallCheck(this, RkCarousel1_03);
+  function RkCarousel104(props) {
+    _classCallCheck(this, RkCarousel104);
 
-    var _this = _possibleConstructorReturn(this, (RkCarousel1_03.__proto__ || Object.getPrototypeOf(RkCarousel1_03)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (RkCarousel104.__proto__ || Object.getPrototypeOf(RkCarousel104)).call(this, props));
 
     _this.state = {
       items: [{
@@ -93,7 +83,7 @@ var RkCarousel1_03 = function (_React$Component) {
   // methods
 
 
-  _createClass(RkCarousel1_03, [{
+  _createClass(RkCarousel104, [{
     key: "nextItem",
     value: function nextItem() {
       var state = this.state; // "this" remover
@@ -157,23 +147,23 @@ var RkCarousel1_03 = function (_React$Component) {
 
       return React.createElement(
         "div",
-        { className: "rkCarousel1-03" },
+        { className: "rkCarousel104" },
         React.createElement(
           "div",
-          { className: "rkCarousel1-03_content" },
+          { className: "rkCarousel104_content" },
           items[this.state.cIndex].itemName,
           React.createElement("br", null),
           React.createElement(
-            "span",
-            { "class": "carousel1-04_description" },
+            "div",
+            { className: "rkCarousel104_description" },
             items[this.state.cIndex].description
           )
         ),
         React.createElement(
           "nav",
-          { className: "rkCarousel1-03_pagination" },
+          { className: "rkCarousel104_pagination" },
           items.map(function (i, index) {
-            return React.createElement("div", { className: items[index].isActive ? 'rkCarousel1_03_pagebuttons rkCarousel1_03_active' : 'rkCarousel1_03_pagebuttons',
+            return React.createElement("div", { className: items[index].isActive ? 'rkCarousel104_pagebuttons rkCarousel104_active' : 'rkCarousel104_pagebuttons',
               onClick: function onClick() {
                 _this3.customPage(index);
               } });
@@ -181,7 +171,7 @@ var RkCarousel1_03 = function (_React$Component) {
         ),
         React.createElement(
           "div",
-          { className: "rkCarousel1-03_prevnext" },
+          { className: "row rkCarousel104_prevnext" },
           React.createElement(PrevButton, { pr_onClick: function pr_onClick() {
               _this3.prevItem();
             } }),
@@ -193,10 +183,10 @@ var RkCarousel1_03 = function (_React$Component) {
     }
   }]);
 
-  return RkCarousel1_03;
+  return RkCarousel104;
 }(React.Component);
 
-exports.default = RkCarousel1_03;
+exports.default = RkCarousel104;
 
 /***/ })
 

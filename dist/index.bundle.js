@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		3: 0
+/******/ 		4: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -487,12 +487,12 @@ module.exports = warning;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
-var ReactCurrentOwner = __webpack_require__(8);
+var ReactCurrentOwner = __webpack_require__(9);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(7);
+var canDefineProperty = __webpack_require__(8);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var REACT_ELEMENT_TYPE = __webpack_require__(16);
@@ -910,6 +910,36 @@ module.exports = emptyFunction;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.asyncComponent = exports.createAsyncContext = exports.AsyncComponentProvider = undefined;
+
+var _AsyncComponentProvider = __webpack_require__(27);
+
+var _AsyncComponentProvider2 = _interopRequireDefault(_AsyncComponentProvider);
+
+var _createAsyncContext = __webpack_require__(22);
+
+var _createAsyncContext2 = _interopRequireDefault(_createAsyncContext);
+
+var _asyncComponent = __webpack_require__(48);
+
+var _asyncComponent2 = _interopRequireDefault(_asyncComponent);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.AsyncComponentProvider = _AsyncComponentProvider2.default;
+exports.createAsyncContext = _createAsyncContext2.default;
+exports.asyncComponent = _asyncComponent2.default;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -1003,7 +1033,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1035,7 +1065,7 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1067,36 +1097,6 @@ var ReactCurrentOwner = {
 };
 
 module.exports = ReactCurrentOwner;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.asyncComponent = exports.createAsyncContext = exports.AsyncComponentProvider = undefined;
-
-var _AsyncComponentProvider = __webpack_require__(27);
-
-var _AsyncComponentProvider2 = _interopRequireDefault(_AsyncComponentProvider);
-
-var _createAsyncContext = __webpack_require__(22);
-
-var _createAsyncContext2 = _interopRequireDefault(_createAsyncContext);
-
-var _asyncComponent = __webpack_require__(48);
-
-var _asyncComponent2 = _interopRequireDefault(_asyncComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.AsyncComponentProvider = _AsyncComponentProvider2.default;
-exports.createAsyncContext = _createAsyncContext2.default;
-exports.asyncComponent = _asyncComponent2.default;
 
 /***/ }),
 /* 10 */
@@ -1189,7 +1189,7 @@ module.exports = lowPriorityWarning;
 
 var _prodInvariant = __webpack_require__(4);
 
-var ReactCurrentOwner = __webpack_require__(8);
+var ReactCurrentOwner = __webpack_require__(9);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -1582,11 +1582,11 @@ module.exports = __webpack_require__(28);
 
 
 var _prodInvariant = __webpack_require__(4),
-    _assign = __webpack_require__(6);
+    _assign = __webpack_require__(7);
 
 var ReactNoopUpdateQueue = __webpack_require__(14);
 
-var canDefineProperty = __webpack_require__(7);
+var canDefineProperty = __webpack_require__(8);
 var emptyObject = __webpack_require__(15);
 var invariant = __webpack_require__(1);
 var lowPriorityWarning = __webpack_require__(10);
@@ -1935,13 +1935,13 @@ module.exports = getIteratorFn;
 
 
 
-var ReactCurrentOwner = __webpack_require__(8);
+var ReactCurrentOwner = __webpack_require__(9);
 var ReactComponentTreeHook = __webpack_require__(11);
 var ReactElement = __webpack_require__(3);
 
 var checkReactTypeSpec = __webpack_require__(34);
 
-var canDefineProperty = __webpack_require__(7);
+var canDefineProperty = __webpack_require__(8);
 var getIteratorFn = __webpack_require__(17);
 var warning = __webpack_require__(2);
 var lowPriorityWarning = __webpack_require__(10);
@@ -2333,6 +2333,10 @@ var _RkCarousel103_wrap = __webpack_require__(50);
 
 var _RkCarousel103_wrap2 = _interopRequireDefault(_RkCarousel103_wrap);
 
+var _RkCarousel104_wrap = __webpack_require__(51);
+
+var _RkCarousel104_wrap2 = _interopRequireDefault(_RkCarousel104_wrap);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home(props) {
@@ -2395,6 +2399,25 @@ function Home(props) {
         { className: "col-sm-9" },
         React.createElement(_RkCarousel103_wrap2.default, null)
       )
+    ),
+    React.createElement(
+      "h2",
+      { className: "item-id" },
+      "rkCarousel1-04"
+    ),
+    React.createElement(
+      "div",
+      { className: "row" },
+      React.createElement(
+        "div",
+        { className: "col-sm-3" },
+        "39"
+      ),
+      React.createElement(
+        "div",
+        { className: "col-sm-9" },
+        React.createElement(_RkCarousel104_wrap2.default, null)
+      )
     )
   );
 }
@@ -2410,11 +2433,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactAsyncComponent = __webpack_require__(9);
+var _reactAsyncComponent = __webpack_require__(6);
 
 exports.default = (0, _reactAsyncComponent.asyncComponent)({
   resolve: function resolve() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 51));
+    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 52));
   }
 }); // wrapper
 
@@ -2536,7 +2559,7 @@ exports.default = AsyncComponentProvider;
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var ReactBaseClasses = __webpack_require__(13);
 var ReactChildren = __webpack_require__(29);
@@ -2554,7 +2577,7 @@ var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
   var lowPriorityWarning = __webpack_require__(10);
-  var canDefineProperty = __webpack_require__(7);
+  var canDefineProperty = __webpack_require__(8);
   var ReactElementValidator = __webpack_require__(18);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
@@ -2990,7 +3013,7 @@ module.exports = PooledClass;
 
 var _prodInvariant = __webpack_require__(4);
 
-var ReactCurrentOwner = __webpack_require__(8);
+var ReactCurrentOwner = __webpack_require__(9);
 var REACT_ELEMENT_TYPE = __webpack_require__(16);
 
 var getIteratorFn = __webpack_require__(17);
@@ -4243,7 +4266,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 
 
-var _assign = __webpack_require__(6);
+var _assign = __webpack_require__(7);
 
 var emptyObject = __webpack_require__(15);
 var _invariant = __webpack_require__(1);
@@ -6045,11 +6068,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactAsyncComponent = __webpack_require__(9);
+var _reactAsyncComponent = __webpack_require__(6);
 
 exports.default = (0, _reactAsyncComponent.asyncComponent)({
   resolve: function resolve() {
-    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 52));
+    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 53));
   }
 }); // wrapper
 
@@ -6064,11 +6087,30 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactAsyncComponent = __webpack_require__(9);
+var _reactAsyncComponent = __webpack_require__(6);
 
 exports.default = (0, _reactAsyncComponent.asyncComponent)({
   resolve: function resolve() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 53));
+    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 54));
+  }
+}); // wrapper
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactAsyncComponent = __webpack_require__(6);
+
+exports.default = (0, _reactAsyncComponent.asyncComponent)({
+  resolve: function resolve() {
+    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 55));
   }
 }); // wrapper
 

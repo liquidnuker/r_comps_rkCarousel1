@@ -1,6 +1,7 @@
 import RkCarousel1_01 from "./RkCarousel1-01_wrap.jsx";
 import RkCarousel1_02 from "./RkCarousel1-02_wrap.jsx";
 import RkCarousel1_03 from "./RkCarousel1-03_wrap.jsx";
+import RkCarousel1_04 from "./RkCarousel1-04_wrap.jsx";
 
 export default function Home(props) {
   return (
@@ -34,6 +35,16 @@ export default function Home(props) {
         </div>
       </div>
     {/*end rkCarousel1-03 placeholder*/}
+
+  {/*rkCarousel1-04 placeholder*/}
+      <h2 className="item-id">rkCarousel1-04</h2>
+      <div className="row">
+        <div className="col-sm-3">39</div>
+        <div className="col-sm-9">
+          <RkCarousel1_04 />
+        </div>
+      </div>
+    {/*end rkCarousel1-04 placeholder*/}
     </div>
   );
 }

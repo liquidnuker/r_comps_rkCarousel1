@@ -306,3 +306,147 @@
 .rkCarousel1-03_prevnext {
   @extend %text--center;
 }
+
+// rkCarousel104
+// ==================================================/
+@mixin rkCarousel104_theme() { 
+  .rkCarousel104 {
+    background-color: #2a2a2d;
+    color: #fff;
+  }  
+
+  .rkCarousel104_pagebuttons {
+    color: #fff;
+    background-color: #bab9b9;
+    border: 1px solid #fff;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+  .rkCarousel104_active {
+    background-color: #be0101;
+    border: 1px solid #000;
+  }
+
+  .rkCarousel104_description {
+    border-top: 1px dashed #343437;
+  }
+
+  .rkCarousel104_content {
+    background-color: #1c1d22;
+  }
+
+  .rkCarousel104_previous,
+  .rkCarousel104_next {
+    color: #fff;
+    background-color: #343437;
+    border: 1px solid #5c5d60;
+
+    svg {
+      fill: #fff;
+    }
+
+    &:hover {
+      background-color: #fff;
+      border: none;
+    }
+
+    &:hover svg {
+      fill: #be0101;
+    }
+  }
+}
+@include rkCarousel104_theme();
+
+@mixin rkCarousel104_pagebuttons() {
+  $size: 12px;
+  width: $size;
+  height: $size;
+}
+
+.rkCarousel104 {
+  // height: 100px; 
+
+  @extend %pos--relative;
+  &:hover .rkCarousel104_prevnext {
+    visibility: visible;
+  }
+}
+
+.rkCarousel104_pagebuttons {
+  @extend %display--inline-block;
+  @include rkCarousel104_pagebuttons();
+  border-radius: 50%;  
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.rkCarousel104_items {
+  height: 0;
+  opacity: 0;
+  transition: visibility 4s, opacity 0.5s ease-in;
+}
+
+.rkCarousel104_items--active {
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}
+
+.rkCarousel104_active {
+  
+}
+
+.rkCarousel104_content {
+  
+}
+
+.rkCarousel104_description {
+  height: 100px;
+}
+
+// controls
+.rkCarousel104_pagination {
+  @extend %pos--absolute;
+  @extend %text--center;
+  width: 100%;
+  bottom: 10%;  
+  z-index: 3;
+}
+
+.rkCarousel104_prevnext {
+  @include center-both;
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.rkCarousel104_previous,
+.rkCarousel104_next {
+  @extend %display--inline-block;
+  @extend %pos--relative;
+  padding: 10px;
+  height: 100%;
+  cursor: pointer;
+  
+  svg {
+   @include center-both;
+  }
+}
+
+.rkCarousel104_previous {
+
+}
+
+.rkCarousel104_next {
+  float: right;
+}
+
+// svg
+.rkCarousel104_chevron {
+  width: 24px;
+  height: 24px;
+}
