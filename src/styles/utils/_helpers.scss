@@ -1,10 +1,3 @@
-@mixin border-radius($var) {
-  -webkit-border-radius: $var + px;
-  -moz-border-radius: $var + px;
-  -ms-border-radius: $var + px;
-  border-radius: $var + px;
-}
-
 // 
 // ==================================================/
 %pos--absolute {
@@ -37,15 +30,13 @@
   display: none;
 }
 
-%visible {
+%vis--visible {
   visibility: visible;
 }
 
-%hidden {
+%vis--hidden {
   visibility: hidden;
 }
-
-
 
 // 
 // ==================================================/
@@ -62,11 +53,11 @@
   margin: 6px;
 }
 
-%margin_top--4 {
+%margin-top--4 {
   margin-top: 4px;
 }
 
-%margin_bottom--4 {
+%margin-bottom--4 {
   margin-bottom: 4px;
 }
 
@@ -83,12 +74,20 @@
   padding: 6px;
 }
 
-%padd_top--4 {
+%padd-top--4 {
   padding-top: 4px;
 }
 
-%padd_bottom--4 {
+%padd-top--6 {
+  padding-top: 6px;
+}
+
+%padd-bottom--4 {
   padding-bottom: 4px;
+}
+
+%padd-bottom--6 {
+  padding-bottom: 6px;
 }
 
 // 
@@ -111,8 +110,22 @@
 
 // 
 // ==================================================/
+%width--100p {
+  width: 100%;
+}
+
+%height--100p {
+  height: 100%;
+}
+
+// 
+// ==================================================/
 %br--4 {
   border-radius: 4px;
+}
+
+%br--6 {
+  border-radius: 6px;
 }
 
 %img--responsive {

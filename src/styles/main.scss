@@ -5,16 +5,15 @@
 @import "vendor/andy";
 @import "utils/helpers";
 @import "base/reset";
+@import "base/colors";
 @import "vendor/normalize"; 
 @import "base/fonts";
-@import "base/colors";
+@import "components/buttons";
 
 @import "vendor/mq"; 
 @import "layout/grid";
 
-// @import "vendor/spinkit";
-
-@import "components/tabs-set1";
+@import "rkCarousel1";
 
 // show the active breakpoint (_mq.scss)
 // ==================================================/
@@ -25,6 +24,10 @@
 @include col-grid-border(#000);
 
 // temp 
+body {
+  @extend %system_normal--300;
+}
+
 .item-id {
   background-color: #ccc;
 }

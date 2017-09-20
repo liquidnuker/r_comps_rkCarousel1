@@ -1,6 +1,6 @@
 import "./styles/main.scss";
 
-import Home from "./Home.jsx";
+import Home from "./components/Home.jsx";
 
 ReactDOM.render(
   <Home />,

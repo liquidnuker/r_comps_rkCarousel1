@@ -1,5 +1,5 @@
 // use export default for async wrap
-import {store} from "./js/store.js";
+import {store} from "../js/store.js";
 
 function PrevButton(props) {
   return (

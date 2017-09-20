@@ -8,9 +8,7 @@ export default function Home(props) {
       <div className="row">
         <div className="col-sm-3">39</div>
         <div className="col-sm-9">
-        {/*begin rkCarousel1*/}
           <RkCarousel1_01 />
-        {/*end rkCarousel1*/}
         </div>
       </div>
     {/*end rkCarousel1-01 placeholder*/}
