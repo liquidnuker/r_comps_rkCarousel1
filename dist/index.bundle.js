@@ -2391,7 +2391,7 @@ var _reactAsyncComponent = __webpack_require__(11);
 
 exports.default = (0, _reactAsyncComponent.asyncComponent)({
   resolve: function resolve() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 50));
+    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 50));
   }
 }); // wrapper
 
@@ -6026,7 +6026,7 @@ var _reactAsyncComponent = __webpack_require__(11);
 
 exports.default = (0, _reactAsyncComponent.asyncComponent)({
   resolve: function resolve() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 51));
+    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 51));
   }
 }); // wrapper
 

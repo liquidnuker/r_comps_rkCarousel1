@@ -1,5 +1,5 @@
 // use export default for async wrap
-import {store} from "../js/store.js";
+// import {store} from "../js/store.js";
 
 function PrevButton(props) {
   return (
@@ -27,10 +27,26 @@ export default class RkCarousel1_02 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: store.items,
+      items: [
+      {
+        itemName: "item1",
+        description: "desc1",
+        imgSrc: "",
+        isActive: true
+      }, 
+      {
+        itemName: "item2",
+        description: "desc2",
+        imgSrc: "",
+        isActive: false
+      }, 
+      {
+        itemName: "item3",
+        description: "desc3",
+        imgSrc: "",
+        isActive: false
+      }],
       cIndex: 0,
-
-      isActive: null,
       activePageButton: 0,
     };
 
