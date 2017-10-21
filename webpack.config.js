@@ -38,12 +38,20 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        options: {
+          presets: ['react', 'env'],
+          plugins: ['transform-runtime']
+        },
         exclude: /node_modules/
       },
       // babel jsx
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
+        options: {
+          presets: ['react', 'env'],
+          plugins: ['transform-runtime']
+        },
         exclude: /node_modules/
       }
     ]
