@@ -9,8 +9,7 @@ export default function Home(props) {
       {/*rkCarousel1-01 placeholder*/}
       <h2 className="item-id">rkCarousel1-01</h2>
       <div className="row">
-        <div className="col-sm-3">39</div>
-        <div className="col-sm-9">
+        <div className="col-sm-12">
           <RkCarousel1_01 />
         </div>
       </div>
@@ -19,8 +18,7 @@ export default function Home(props) {
   {/*rkCarousel1-02 placeholder*/}
       <h2 className="item-id">rkCarousel1-02</h2>
       <div className="row">
-        <div className="col-sm-3">39</div>
-        <div className="col-sm-9">
+        <div className="col-sm-12">
           <RkCarousel1_02 />
         </div>
       </div>
@@ -29,8 +27,7 @@ export default function Home(props) {
   {/*rkCarousel1-03 placeholder*/}
       <h2 className="item-id">rkCarousel1-03</h2>
       <div className="row">
-        <div className="col-sm-3">39</div>
-        <div className="col-sm-9">
+        <div className="col-sm-12">
           <RkCarousel1_03 />
         </div>
       </div>
@@ -39,8 +36,7 @@ export default function Home(props) {
   {/*rkCarousel1-04 placeholder*/}
       <h2 className="item-id">rkCarousel1-04</h2>
       <div className="row">
-        <div className="col-sm-3">39</div>
-        <div className="col-sm-9">
+        <div className="col-sm-12">
           <RkCarousel1_04 />
         </div>
       </div>
