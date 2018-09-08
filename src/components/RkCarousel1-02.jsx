@@ -57,21 +57,19 @@ export default class RkCarousel102 extends React.Component {
   
   // methods
   nextItem() {
-    let state = this.state; // "this" remover
-    state.cIndex = state.cIndex + 1;
-    state.cIndex = state.cIndex % state.items.length; // go to first
+    this.state.cIndex = this.state.cIndex + 1;
+    this.state.cIndex = this.state.cIndex % this.state.items.length; // go to first
     
-    this.setActivePageButton(state.cIndex);
+    this.setActivePageButton(this.state.cIndex);
   }
 
   prevItem() {
-    let state = this.state;
-    if (state.cIndex === 0) {
-      state.cIndex = state.items.length; // go to last
+    if (this.state.cIndex === 0) {
+      this.state.cIndex = this.state.items.length; // go to last
     }
-    state.cIndex = state.cIndex - 1;
+    this.state.cIndex = this.state.cIndex - 1;
     
-    this.setActivePageButton(state.cIndex);
+    this.setActivePageButton(this.state.cIndex);
   }
 
   customPage(index) {
@@ -80,16 +78,13 @@ export default class RkCarousel102 extends React.Component {
   }
 
   setActivePageButton(index) {
-    let activeItem = index;
-    let state = this.state;
-    
-    state.items[activeItem].isActive = true;
+    this.state.items[index].isActive = true;
 
-    if (state.activePageButton !== activeItem) {
-      state.items[state.activePageButton].isActive = false;
+    if (this.state.activePageButton !== index) {
+      this.state.items[this.state.activePageButton].isActive = false;
 
       // set current activePageButton
-      state.activePageButton = activeItem;
+      this.state.activePageButton = index;
     }
 
     this.refresh();
